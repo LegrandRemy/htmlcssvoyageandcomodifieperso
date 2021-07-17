@@ -68,6 +68,7 @@ li a:hover {
     background-color: #EBD5A8;
 }
 
+
 #searchForm input {
     padding: 5px;
     border-color: #81B3D4;
@@ -373,6 +374,37 @@ h3 {
     header {
         height: 30%;
     }
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+        display: flex;
+        padding: 1em;
+        color: #94CCE7;
+        border: 0 4px 0 4px solid white;
+    }
+    
+    li a:hover {
+        /* survol*/
+        background-color: #81B3D4;
+        color: black;
+    }
+    
+    #barre {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #EBD5A8;
+    }
+    
+    #searchForm input {
+        padding: 5px;
+        border-color: #81B3D4;
+        border-radius: 5px;
+    }
 
     section#presentation {
         /*  texte de presentation*/
@@ -397,6 +429,34 @@ h3 {
         text-align: center;
         font-family: 'Dancing Script'
     }
+    .copyright {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: 30vw;
+    }
+
+    .insta,
+    .fb {
+        width: 11vw;
+        height: 8vh;
+    }
+    .reseauxsociaux {
+        display: flex;
+        width: 50%;
+        padding: 30px;
+    }
+    #adresse {
+        width: 50%;
+        padding: 20px;
+    }
+    
+    #hour {
+        width: 50%;
+        padding: 20px;
+        margin-top: 10px;
+    }
+}
 
     /*------  FIN responsive version tablette---------*/
 
@@ -413,6 +473,49 @@ h3 {
         header {
             height: 40%;
             width: 100%;
+        }
+        
+        #barre {
+            display: grid;
+            grid-template-columns: 40vw;
+            grid-template-rows: repeat(5, 3vh);
+            grid-template-areas: "Accueil"
+            "Destinations"
+            "Réservations"
+            "Contact"
+            "searchForm";
+            grid-gap: 3px;
+            gap: 3px;
+            list-style-type: none;
+            background-color: #EBD5A8;
+        }
+        li {
+            
+            height: 2vh;
+            font-size: 2rem;
+            border: 1px solid black;
+        }
+        .Accueil {
+            grid-area: Accueil;
+        }
+        .Destinations{
+            grid-area: Destinations;
+        }
+        .Réservations{
+            grid-area: Réservations;
+        }
+        .Contact{
+            grid-area: Contact;
+        }
+        #searchForm {
+            grid-area: searchText;
+            background-color: blueviolet;
+        }
+        
+        li a:hover {
+            /* survol*/
+            background-color: #81B3D4;
+            color: black;
         }
 
         /*------navigation-----*/
@@ -471,7 +574,7 @@ h3 {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            margin-left: 30vw;
+            margin-left: 20vw;
         }
 
         .insta,
@@ -493,6 +596,23 @@ h3 {
             width: 50%;
             padding: 20px;
             margin-top: 10px;
+        }
+        #send {
+            display: flex;
+            flex-wrap: wrap;
+        background-size: 100vw;
+            margin-left: 0;
+        }
+        h3 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-left: 10%;
+            margin-top: 80%;
+        }
+        .accueilbutton {
+            display: flex;
+            flex-wrap: wrap;
         }
     }
 
