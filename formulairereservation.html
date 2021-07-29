@@ -42,52 +42,53 @@
         </ul>
     </nav>
     <div class="container">
-        <p>Réservation</p>
-        <form method="POST" action="">
+        <h4>Réservation</h4>
+        <form method="POST" action="#">
             <fieldset id="reservation">
                 <legend class="legend">FORMULAIRE DE RESERVATION</legend>
-                <label for="fname">Nom & prénom</label>
-                <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
+                <label for="fname">Nom</label>
+                <input type="text" id="fname" name="firstname" placeholder="Votre nom ">
+                <label for="fname">Prénom</label>
+                <input type="text" id="fname" name="firstname" placeholder="Votre prénom">
 
 
                 <label for="meeting-time">Periodes</label> </br></br>
                 <label for="meeting-time">Choisir une date d'arrivée: </label></br>
 
-                <input type="datetime-local" id="meeting-time" name="meeting-time" value="2021-07-15T19:30"
-                    min="2021-07-15T00:00" max="2021-12-31T00:00">
+                <input type="date" class="meeting-time" name="meeting-time" >
+                
+                <div>
+                <label for="meeting-time">Choisir une date de départ: </label>
+            </div>
+                <div>
+                    <input type="date" class="meeting-time" name="meeting-time">
+                </div>
+                <div>
+                    <label class="number" type="number" for="nombre">Nombre d'adultes</label>
+                    <input type="number" name="nombre">
+                    <!-- <option value="1">1</option>
+                    <option value="2">2</option> -->
 
-                <label class="number" for="nombre">Nombre d'adultes</label>
-                <select name="nombre">
+                </div>
+                <div>
+                    <label class="numberchild" type="number" for="nombre">Nombre d'enfants</label>
+                    <input type="number" name="nombre">
+                    <!-- <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
+                    <option value="3">3</option> -->
+                </div>
 
-                </select></br>
-                <label class="numberchild" for="nombre">Nombre d'enfants</label>
-                <select name="nombre">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-
-                </select>
-                </br>
-                <label for="meeting-time">Choisir une date de départ: </label></br>
-
-                <input type="datetime-local" id="meeting-time" name="meeting-time" value="2021-07-15T19:30"
-                    min="2021-07-15T00:00" max="2021-12-31T00:00">
+                <div>
+                    <label for="emailAddress">Email</label>
+                    <input id="emailAddress" type="email" name="email" placeholder="Votre email">
 
 
-                </br></br>
+                    <label for="subject">Message informations supplementaires</label>
+                    <textarea id="subject" name="subject" placeholder="Votre message"></textarea>
 
-
-                <label for="emailAddress">Email</label>
-                <input id="emailAddress" type="email" name="email" placeholder="Votre email">
-
-
-                <label for="subject">Message informations supplementaires</label>
-                <textarea id="subject" name="subject" placeholder="Votre message" style="height:200px"></textarea>
-
-                <a href="send.html" ><input type="button" class="button" value="Envoyer"></a>
+                    <a href="send.html"><input type="button" class="button" value="Envoyer"></a>
+                </div>
             </fieldset>
         </form>
     </div>
@@ -96,7 +97,7 @@
 
     <div id="scroll_to_top">
         <a href="#top"><img src="assets/img/top-100x100.png"> </a>
-    </div </body>
+    </div>
     <footer>
         <div id="adresse">
             <div class="adresse bloc">70 Rue des Jacobins</div></br>

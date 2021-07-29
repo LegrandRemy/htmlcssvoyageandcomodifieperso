@@ -19,6 +19,7 @@ body {
     background-color: #FDFFF1;
     overflow-x: hidden;
     /* Enlever le scroll horizontal */
+    scroll-behavior: smooth;
 }
 
 /*  Header */
@@ -39,7 +40,7 @@ header {
 
 h1 {
 
-    font-size: 5rem;
+    font-size: 6rem;
     /* taille du titre */
 }
 
@@ -48,7 +49,7 @@ a {
     font-size: 2rem;
     display: flex;
     padding: 1em;
-    color: #94CCE7;
+    color: #2C5F81;
     border: 0 4px 0 4px solid white;
 }
 
@@ -66,6 +67,8 @@ li a:hover {
     padding: 0;
     margin: 0;
     background-color: #EBD5A8;
+    font-family: 'patate';
+    font-style: italic;
 }
 
 
@@ -160,6 +163,9 @@ img:hover {
     background-color: #EBD5A8;
 }
 
+#subject {
+    height: 200px;
+}
 
 
 
@@ -243,10 +249,12 @@ label {
 
 .numberchild {
     margin-left: 480px;
+  
 }
 
-#meeting-time {
-    grid-column: 1
+.meeting-time {
+    grid-column: 1;
+    margin-bottom: 50px;
 }
 
 
@@ -255,16 +263,19 @@ label {
     padding: 20px;
     width: 100%;
     font-family: 'patate';
+    margin-bottom: 100px;
 }
 
-.container p {
+h4 {
     font-size: 3rem;
     color: #EBD5A8;
     border-radius: 10px;
     background-color: #81B3D4;
     width: 30%;
     text-align: center;
-    font-family: 'Dancing Script'
+    font-family: 'Dancing Script';
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 input[type=text],
@@ -374,21 +385,22 @@ h3 {
     header {
         height: 30%;
     }
+
     a {
         text-decoration: none;
         font-size: 2rem;
         display: flex;
         padding: 1em;
-        color: #94CCE7;
+        color: #2C5F81;
         border: 0 4px 0 4px solid white;
     }
-    
+
     li a:hover {
         /* survol*/
         background-color: #81B3D4;
         color: black;
     }
-    
+
     #barre {
         display: flex;
         flex-wrap: wrap;
@@ -399,7 +411,7 @@ h3 {
         margin: 0;
         background-color: #EBD5A8;
     }
-    
+
     #searchForm input {
         padding: 5px;
         border-color: #81B3D4;
@@ -429,6 +441,7 @@ h3 {
         text-align: center;
         font-family: 'Dancing Script'
     }
+
     .copyright {
         display: flex;
         flex-wrap: wrap;
@@ -441,16 +454,18 @@ h3 {
         width: 11vw;
         height: 8vh;
     }
+
     .reseauxsociaux {
         display: flex;
         width: 50%;
         padding: 30px;
     }
+
     #adresse {
         width: 50%;
         padding: 20px;
     }
-    
+
     #hour {
         width: 50%;
         padding: 20px;
@@ -458,165 +473,176 @@ h3 {
     }
 }
 
-    /*------  FIN responsive version tablette---------*/
+/*------  FIN responsive version tablette---------*/
 
-    /*------  responsive version téléphone---------*/
+/*------  responsive version téléphone---------*/
 
-    @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
-        h1 {
-            padding: 5px;
-            font-size: 4rem;
-            /* taille du titre */
-        }
+    h1 {
+        padding: 5px;
+        font-size: 4rem;
+        /* taille du titre */
+    }
 
-        header {
-            height: 40%;
-            width: 100%;
-        }
-        
-        #barre {
-            display: grid;
-            grid-template-columns: 40vw;
-            grid-template-rows: repeat(5, 3vh);
-            grid-template-areas: "Accueil"
+    header {
+        height: 40%;
+        width: 100%;
+    }
+
+    #barre {
+        display: grid;
+        grid-template-columns: 40vw;
+        height: 20vh;
+        grid-template-rows: repeat(5, 3vh);
+        grid-template-areas: "accueil"
             "Destinations"
             "Réservations"
             "Contact"
             "searchForm";
-            grid-gap: 3px;
-            gap: 3px;
-            list-style-type: none;
-            background-color: #EBD5A8;
-        }
-        li {
-            
-            height: 2vh;
-            font-size: 2rem;
-            border: 1px solid black;
-        }
-        .Accueil {
-            grid-area: Accueil;
-        }
-        .Destinations{
-            grid-area: Destinations;
-        }
-        .Réservations{
-            grid-area: Réservations;
-        }
-        .Contact{
-            grid-area: Contact;
-        }
-        #searchForm {
-            grid-area: searchText;
-            background-color: blueviolet;
-        }
-        
-        li a:hover {
-            /* survol*/
-            background-color: #81B3D4;
-            color: black;
-        }
-
-        /*------navigation-----*/
-        li:not(:last-child) a,
-        li form {
-            display: none;
-        }
-
-        li:last-child {
-            display: flex;
-            /*afficher menu burger du responsive*/
-
-        }
-
-        /*------Fin navigation-----*/
-        /*------presentation-----*/
-        section#presentation {
-            /*  texte de presentation*/
-            margin: 20px 0;
-            padding: 0 10px;
-
-        }
-
-        /*------Fin presentation-----*/
-
-        #destination {
-            flex-wrap: wrap;
-        }
-
-        .box {
-            width: 100vw;
-            margin-bottom: 40px;
-        }
-
-        .number {
-            display: flex;
-            margin-left: 10px;
-        }
-
-        .numberchild {
-            display: flex;
-            margin-left: 10px;
-        }
-
-        .container p {
-            font-size: 2rem;
-            color: #EBD5A8;
-            border-radius: 10px;
-            background-color: #81B3D4;
-            width: 40%;
-            text-align: center;
-            font-family: 'Dancing Script';
-        }
-
-        .copyright {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            margin-left: 20vw;
-        }
-
-        .insta,
-        .fb {
-            width: 11vw;
-            height: 8vh;
-        }
-        .reseauxsociaux {
-            display: flex;
-            width: 50%;
-            padding: 30px;
-        }
-        #adresse {
-            width: 50%;
-            padding: 20px;
-        }
-        
-        #hour {
-            width: 50%;
-            padding: 20px;
-            margin-top: 10px;
-        }
-        #send {
-            display: flex;
-            flex-wrap: wrap;
-        background-size: 100vw;
-            margin-left: 0;
-        }
-        h3 {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-left: 10%;
-            margin-top: 80%;
-        }
-        .accueilbutton {
-            display: flex;
-            flex-wrap: wrap;
-        }
+        list-style-type: none;
+        background-color: #EBD5A8;
     }
 
-    /*------ Fin responsive téléphone ---------*/
+    .bloc {
+        display: flex;
+        height: 2vh;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+    }
+
+    .bloc1 {
+        grid-area: accueil;
+    }
+
+    .bloc2 {
+        grid-area: Destinations;
+    }
+
+    .bloc3 {
+        grid-area: Réservations;
+    }
+
+    .bloc4 {
+        grid-area: Contact;
+    }
+
+    #searchForm {
+        grid-area: searchForm;
+        background-color: blueviolet;
+    }
+
+    li a:hover {
+        /* survol*/
+        background-color: #81B3D4;
+        color: black;
+    }
+
+    /*------navigation-----*/
+    li:not(:last-child) a,
+    li form {
+        display: none;
+    }
+
+    li:last-child {
+        display: flex;
+        /*afficher menu burger du responsive*/
+
+    }
+
+    /*------Fin navigation-----*/
+    /*------presentation-----*/
+    section#presentation {
+        /*  texte de presentation*/
+        margin: 20px 0;
+        padding: 0 10px;
+
+    }
+
+    /*------Fin presentation-----*/
+
+    #destination {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 100vw;
+        margin-bottom: 40px;
+    }
+
+    .number {
+        display: flex;
+        margin-left: 10px;
+    }
+
+    .numberchild {
+        display: flex;
+        margin-left: 10px;
+    }
+
+    .h4 {
+        font-size: 2rem;
+        color: #EBD5A8;
+        border-radius: 10px;
+        background-color: #81B3D4;
+        width: 40%;
+        text-align: center;
+        font-family: 'Dancing Script';
+    }
+
+    .copyright {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: 20vw;
+    }
+
+    .insta,
+    .fb {
+        width: 11vw;
+        height: 8vh;
+    }
+
+    .reseauxsociaux {
+        display: flex;
+        width: 50%;
+        padding: 30px;
+    }
+
+    #adresse {
+        width: 50%;
+        padding: 20px;
+    }
+
+    #hour {
+        width: 50%;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    #send {
+        display: flex;
+        flex-wrap: wrap;
+        background-size: 100vw;
+        margin-left: 0;
+    }
+
+    h3 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: 10%;
+        margin-top: 80%;
+    }
+
+    .accueilbutton {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/*------ Fin responsive téléphone ---------*/
 
 
-    /*-------- Bonus personel ------*/
+/*-------- Bonus personel ------*/
